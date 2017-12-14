@@ -8,6 +8,7 @@
 /* exported DeleteCustomer*/
 /* exported ModifyOrder*/
 
+
 function MenuChoice(selection)
 {
     document.getElementById("Area1").style.display="none";
@@ -535,3 +536,13 @@ function checkConnectionType() {
     alert('Connection type: ' + states[networkState]);
 }
 checkConnectionType();
+
+function vibration() {
+   var time = 3000;
+   navigator.vibrate(time);
+}
+
+function vibrationPattern() {
+   var pattern = [2000, 1000, 3000, 1000, 1000, 1000];
+   navigator.vibrate(pattern);
+}

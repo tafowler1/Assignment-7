@@ -35,6 +35,15 @@ function onOnline()
     alert('Device is online');
 }
     </script>
+    
+    <script>
+	document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.vibrate);
+}
+document.getElementById("vibration").addEventListener("click", vibration);
+document.getElementById("vibrationPattern").addEventListener("click", vibrationPattern);
+    </script>
 </head>
 
 <body>
@@ -271,7 +280,11 @@ function onOnline()
 	<label id="networkinfo"></label>
 </section>
 
-<section id="Area12" class="area12"></section>
+<section id="Area12" class="area12">
+	<h2> Vibrate Your Device</h2>
+	<button onclick="vibration();" class="button">Vibrate</button>
+	<button onclick="vibrationPattern();" class="button">Vibrate Pattern</button>
+</section>
         
 <br>
 <br>
